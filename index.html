@@ -20,9 +20,23 @@
       <h1 class="title">Invoice Parser</h1>
 
       <div class="container">
-        <h5>Select the Invoice to parse</h5>
-
-        <input type="file" on-read-file="onFileSelect($fileContent)" />
+        <form>
+          <div class="field">
+              <div class="file is-centered is-success has-name">
+                <label class="file-label">
+                  <input class="file-input" type="file" name="resume" on-read-file="onFileSelect($fileContent, fileName)">
+                  <span class="file-cta">
+                    <span class="file-label">
+                        Select Invoice
+                    </span>
+                  </span>
+                  <span class="file-name">
+                    {{fileName}}
+                  </span>
+                </label>
+              </div>
+            </div>
+          </form>
       </div>
     </div>
     <div class="container ">
@@ -33,7 +47,9 @@
                 </pre>
             </div>
             <div class="column card" style="margin-right: 15px; max-width: 50%; max-height: 400px; overflow: auto;">
-                <pre> {{parsed}} </pre>
+                <pre>
+                  {{parsed}}
+                </pre>
             </div>
         </div>
     </div>

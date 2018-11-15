@@ -15,7 +15,10 @@ function ReadFile($parse) {
         if (file.type.indexOf("text/") >= 0) {
           reader.onload = function(onLoadEvent) {
             scope.$apply(function() {
-              fn(scope, { $fileContent: onLoadEvent.target.result });
+              fn(scope, {
+                $fileContent: onLoadEvent.target.result,
+                fileName: file.name
+              });
             });
           };
 
