@@ -1,0 +1,16 @@
+{
+  "name": "angular_test",
+  "version": "1.0.0",
+  "description": "Install nodejs to run marco polo Program",
+  "main": "main.js",
+  "scripts": {
+    "app:program": "node main.js",
+    "app:angular": "npx http-server ./invoiceParser",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saurabh Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
